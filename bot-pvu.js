@@ -7,7 +7,7 @@ if (typeof (maxPage) !== 'undefined') {
 }
 
 var pagePass = 0;
-console.log("Loading")
+console.log("Loading...")
 
 var interval = setInterval(() => {
     var loadingGif = document.getElementsByClassName("loading-page");
