@@ -5,17 +5,28 @@ if (typeof (maxPage) !== 'undefined') {
     maxPage = maxPage[0];
 }
 
+var curPage = document.getElementsByClassName("currentPage tw-mr-2")[0];
+
+if (typeof (curPage) !== 'undefined')
+    curPage = curPage.innerText;
+else
+    curPage = 1;
+
 var pagePass = 0;
-console.log("Sabar ya loading bentar")
+console.log("Loading...")
 
-var interval = setInterval(() => {
-    var curPage = document.getElementsByClassName("currentPage tw-mr-2")[0];
+for (let page = curPage; page <= maxPage; page++) {
 
-    if (typeof (curPage) !== 'undefined') {
-        curPage = curPage.innerText;
-        console.log("Page ke: " + curPage + "\n")
-    } else {
-        console.log("Page ke: 1" + "\n")
+    console.log("Page ke: " + page);
+
+    //detect loading gif
+    var loading = true;
+    while (loading) {
+        var loadingGif = document.getElementsByClassName("loading-page");
+        console.log(loadingGif.length)
+        if (loadingGif.length === 0) {
+            loading = false;
+        }
     }
 
     var validCount = 0;
@@ -29,13 +40,13 @@ var interval = setInterval(() => {
         }
     }
 
-    console.log("curPage: " + (typeof (curPage) === 'undefined' ? 1 : curPage))
-    console.log("maxPage: " + (typeof (maxPage) === 'undefined' ? 1 : maxPage))
+    console.log("Page: " + (typeof (curPage) === 'undefined' ? 1 : curPage))
+    console.log("of: " + (typeof (maxPage) === 'undefined' ? 1 : maxPage))
     if (curPage == maxPage) {
         console.log("dah page terakhir")
         clearInterval(interval);
     } else if (pagePass === 0) {
-        console.log("Page ini langsung lewatin yak, gua asumsi lu dah cek page ini")
+        console.log("Initial page akan selalu dilewati (asumsi sudah dicek sebelumnya)")
         pagePass++
         document.querySelectorAll('.tw-mt-6')[1].children[4].click();
     } else if (validCount === 0) {
@@ -45,4 +56,4 @@ var interval = setInterval(() => {
         clearInterval(interval);
     }
 
-}, 2000);
+}
