@@ -38,23 +38,22 @@
     })
 
     var maxWater = 60;
-    var maxPage = document.getElementsByClassName("text tw-mr-2")[1];
-
-    if (typeof (maxPage) !== 'undefined') {
-        maxPage = maxPage.innerText.match(/\d+/g);
-        maxPage = maxPage[0];
-    }
-
     var pagePass = 0;
-    console.log("Loading...")
 
+    console.log("Loading...")
     var interval = setInterval(() => {
         var loadingGif = document.getElementsByClassName("loading-page");
         if (loadingGif.length === 0) {
-            var curPage = document.getElementsByClassName("currentPage tw-mr-2")[0];
 
+            var curPage = document.getElementsByClassName("currentPage tw-mr-2")[0];
             if (typeof (curPage) !== 'undefined')
                 curPage = curPage.innerText;
+
+            var maxPage = document.getElementsByClassName("text tw-mr-2")[1];
+            if (typeof (maxPage) !== 'undefined') {
+                maxPage = maxPage.innerText.match(/\d+/g);
+                maxPage = maxPage[0];
+            }
 
             var validCount = 0;
             var waterParent = document.getElementsByClassName("tw-absolute tool-icon");
