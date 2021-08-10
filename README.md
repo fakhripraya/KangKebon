@@ -17,5 +17,9 @@ Cara pake:
 
 Inget DYOR!!
 
+Known issue:
+
+- kalau websitenya lag, akan tidak sinkron (lagi dibuat v2nya biar bisa sinkron)
+
 DONASI:
 BSC/MATIC : 0xD9E986Bd44512CD2c0De4844ef902769e2647F4a
