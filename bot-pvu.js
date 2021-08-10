@@ -31,17 +31,13 @@ var interval = setInterval(() => {
         console.log("Current Page: " + (typeof (curPage) === 'undefined' ? 1 : curPage))
         console.log("Total Page: " + (typeof (maxPage) === 'undefined' ? 1 : maxPage))
         if (curPage == maxPage) {
-            console.log("Sudah page terakhir")
-            clearInterval(interval);
+            console.log("Sudah page terakhir"); clearInterval(interval);
         } else if (pagePass === 0) {
-            console.log("Page pertama selalu dilewati")
-            pagePass++
-            document.querySelectorAll('.tw-mt-6')[1].children[4].click();
+            console.log("Page pertama selalu dilewati"); pagePass++; document.querySelectorAll('.tw-mt-6')[1].children[4].click();
         } else if (validCount === 0) {
             document.querySelectorAll('.tw-mt-6')[1].children[4].click();
         } else {
-            console.log("Ada yang kering nih")
-            clearInterval(interval);
+            console.log("Ada yang kering nih"); clearInterval(interval);
         }
     }
 }, 2000);
