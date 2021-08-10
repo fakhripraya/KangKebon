@@ -22,6 +22,6 @@ Known issue:
 - kalau websitenya lag, akan tidak sinkron (lagi dibuat v2nya biar bisa sinkron)
 
 DONASI:
-BSC/MATIC : 0xf0F16b80Ff38F882dD5b3C0Ed6ec4e06774324D7
+BSC : 0xf0F16b80Ff38F882dD5b3C0Ed6ec4e06774324D7
 
 Hubungin gua kalo ada masalah
