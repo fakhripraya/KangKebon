@@ -1,3 +1,4 @@
+var maxWater = 60;
 var maxPage = document.getElementsByClassName("text tw-mr-2")[1];
 
 if (typeof (maxPage) !== 'undefined') {
@@ -21,7 +22,7 @@ var interval = setInterval(() => {
         for (let i = 0; i < waterParent.length; i++) {
             if (waterParent[i].src === "https://marketplace.plantvsundead.com/_nuxt/img/water@3x.d5ca50d.png") {
                 console.log(waterParent[i].parentElement.children[2].innerText)
-                if (waterParent[i].parentElement.children[2].innerText < 40) {
+                if (waterParent[i].parentElement.children[2].innerText < maxWater) {
                     validCount++
                 }
             }
