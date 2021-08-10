@@ -2,12 +2,18 @@
 Bot KangKebon, buat anda yang males nyari taneman buat disiram
 
 Cara pake:
-copy code di file js
-buka plotnya (yg ada tampilan pagenya)
-buka inspect element
-buka tab console di inspect element
-paste codenya
-have fun
+
+- copy code di file js
+
+- buka plotnya (yg ada tampilan pagenya)
+
+- buka inspect element
+
+- buka tab console di inspect element
+
+- paste codenya
+
+- have fun
 
 Inget DYOR!!
 
