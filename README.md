@@ -1,7 +1,26 @@
 # KangKebon
 Bot KangKebon, buat anda yang males nyari taneman buat disiram
 
+Cara pake:
+
+- copy code di file js
+
+- buka plotnya (yg ada tampilan pagenya)
+
+- buka inspect element
+
+- buka tab console di inspect element
+
+- paste codenya
+
+- jika ingin ganti maksimal level air, bisa ganti angka disebelah var maxWater di line kode 1
+
+- have fun
+
 Inget DYOR!!
 
 DONASI:
-BSC/MATIC : 0xD9E986Bd44512CD2c0De4844ef902769e2647F4a
+
+BNB(BSC) : 0xf0F16b80Ff38F882dD5b3C0Ed6ec4e06774324D7
+
+Tulis di issue kalau ada masalah
