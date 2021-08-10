@@ -13,6 +13,8 @@ Cara pake:
 
 - paste codenya
 
+- jika ingin ganti maksimal level air, bisa ganti angka disebelah var maxWater di line kode 1
+
 - have fun
 
 Inget DYOR!!
