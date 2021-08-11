@@ -1,14 +1,14 @@
 // ==UserScript==
 // @name         Kang Kebun
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2
 // @description  try to take over the world!
 // @author       You
 // @match        https://marketplace.plantvsundead.com/farm/other/*
 // @icon         https://plantvsundead.com/assets/img/icon.svg
 // @updateURL    https://github.com/fakhripraya/KangKebon/raw/main/monyet-pengganggu-pvu.user.js
 // @require      https://www.cssscript.com/demo/simple-vanilla-javascript-toast-notification-library-toastify/src/toastify.js
-// @resource     REMOTE_CSS https://www.cssscript.com/demo/simple-vanilla-javascript-toast-notification-library-toastify/src/toastify.css
+// @resource     REMOTE_CSS https://raw.githubusercontent.com/fakhripraya/KangKebon/main/toast.css
 // @grant        GM_xmlhttpRequest
 // @grant        GM_getResourceText
 // @grant        GM_addStyle
