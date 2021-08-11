@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Kang Gagak
 // @namespace    http://tampermonkey.net/
-// @version      1.0.8
+// @version      1.0.9
 // @description  try to take over the crow!
 // @author       You
 // @match        https://marketplace.plantvsundead.com/farm/other/*
@@ -35,17 +35,16 @@
     //Toast
     var crowToast = Toastify({
         text: "Ada crow! ",
-        duration: 10000
+        close: true
     })
 
     var lastPageToast = Toastify({
         text: "Sudah page terakhir :( ",
-        duration: 10000
+        close: true
     })
 
-    var pagePass = 0;
-
     console.log("Loading...")
+
     var interval = setInterval(() => {
         var loadingGif = document.getElementsByClassName("loading-page");
         var bodyElement = document.getElementById("__layout").children[0].children[1].children[0];
