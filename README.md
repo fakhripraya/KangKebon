@@ -1,7 +1,7 @@
 # KangKebon
 Bot KangKebon, buat anda yang males nyari taneman buat disiram
 
-Cara pake bot-pvu:
+Cara pake bot manual load:
 
 - copy code di file bot-pvu.js
 
@@ -14,6 +14,24 @@ Cara pake bot-pvu:
 - paste codenya
 
 - jika ingin ganti maksimal level air, bisa ganti angka disebelah var maxWater di line kode 1
+
+- have fun
+
+Cara pake bot auto load:
+
+- download tamper monkey extension dari google
+
+- copy code di file monyet-pengganggu-pvu.user.js
+
+- buka tamper monkey dan create a new script
+
+- paste code
+
+- klik file > save
+
+- sekarang harusnya sudah autoload, kalau belum ke load di refresh aja page plotnya
+
+- jika ingin ganti maksimal level air, bisa ganti angka disebelah var maxWater di script tsb (cari aja)
 
 - have fun
 
