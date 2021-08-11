@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Kang Kebun Bergagak
 // @namespace    http://tampermonkey.net/
-// @version      1.0.2
+// @version      1.0.3
 // @description  try to take over the plot and crow!
 // @author       You
 // @match        https://marketplace.plantvsundead.com/farm/other/*
@@ -61,8 +61,8 @@
                 curPage = curPage.innerText;
 
             var maxPage = document.getElementsByClassName("text tw-mr-2")[1];
-            if (typeof (maxPage) !== 'undefined'){
-                maxPage = maxPage.innerText.match(/\d+/g); 
+            if (typeof (maxPage) !== 'undefined') {
+                maxPage = maxPage.innerText.match(/\d+/g);
                 maxPage = maxPage[0];
             }
 
@@ -89,16 +89,16 @@
             console.log("Current Page: " + (typeof (curPage) === 'undefined' ? 1 : curPage))
             console.log("Total Page: " + (typeof (maxPage) === 'undefined' ? 1 : maxPage))
             if (curPage == maxPage) {
-                if (kebonValidCount > 0){
-                    dryWaterToast.showToast(); 
+                if (kebonValidCount > 0) {
+                    dryWaterToast.showToast();
                     console.log("Ada yang kering nih!");
                 }
-                if (gagakValidCount > 0){
-                    crowToast.showToast(); 
+                if (gagakValidCount > 0) {
+                    crowToast.showToast();
                     console.log("Ada crow!");
                 }
-                lastPageToast.showToast(); 
-                console.log("Sudah page terakhir"); 
+                lastPageToast.showToast();
+                console.log("Sudah page terakhir");
                 clearInterval(interval);
             } else if (validCount === 0) {
                 document.querySelectorAll('.tw-mt-6')[1].children[4].click();
