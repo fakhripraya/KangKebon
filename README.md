@@ -47,8 +47,11 @@ Bot KangKebon, buat anda yang males nyari taneman buat disiram
 **Cara Update di tampermonkey:**
 
 - Klik icon extension tampermonkey
+
 - Pilih Utilities
+
 - klik Check for userscript updated
+
   ![tampermonkey update](https://media.discordapp.net/attachments/873408564159451217/874851323852492860/unknown.png)
 
 
