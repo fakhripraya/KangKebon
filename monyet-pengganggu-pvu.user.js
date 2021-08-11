@@ -35,14 +35,12 @@
     //Toast
     var dryWaterToast = Toastify({
         text: "Ada yang kering nih!",
-        close: true,
-        duration: 10000
+        close: true
     })
 
     var lastPageToast = Toastify({
         text: "Sudah page terakhir :(",
-        close: true,
-        duration: 10000
+        close: true
     })
 
     var maxWater = 60;
