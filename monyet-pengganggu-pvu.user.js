@@ -7,7 +7,7 @@
 // @match        https://marketplace.plantvsundead.com/farm/other/*
 // @icon         https://plantvsundead.com/assets/img/icon.svg
 // @updateURL    https://github.com/fakhripraya/KangKebon/raw/main/monyet-pengganggu-pvu.user.js
-// @require      https://www.cssscript.com/demo/simple-vanilla-javascript-toast-notification-library-toastify/src/toastify.js
+// @require      https://cdn.jsdelivr.net/npm/toastify-js
 // @resource     REMOTE_CSS https://raw.githubusercontent.com/fakhripraya/KangKebon/main/toast.css
 // @grant        GM_xmlhttpRequest
 // @grant        GM_getResourceText
