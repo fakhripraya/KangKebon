@@ -21,15 +21,15 @@ Cara pake bot auto load:
 
 - download tamper monkey extension dari google
 
-- copy code di file monyet-pengganggu-pvu.user.js
-
-- buka tamper monkey dan create a new script
-
-- paste code
-
-- klik file > save
-
+- pilih monyet-pengganggu-pvu-gagak.user.js/monyet-pengganggu-pvu-kebon-gagak.user.js/monyet-pengganggu-pvu.user.js lalu klik raw
+- ![image](https://user-images.githubusercontent.com/56806850/129019777-99cafb2f-1c77-47cc-8bae-4f0e687431ce.png)
+- automatis bisa install di tamper monkey
+- ![image](https://user-images.githubusercontent.com/56806850/129019866-193e214d-8aed-4a85-8adc-62836bfc5e6f.png)
+- cek di dashboard tamper monkey dan nyalakan salah satu script
+- ![image](https://user-images.githubusercontent.com/56806850/129019976-7c9fdbde-6e95-43a4-9b40-557dc746b52f.png)
 - sekarang harusnya sudah autoload, kalau belum ke load di refresh aja page plotnya
+
+- script pakai salah 1 saja, jika dienable 2 script akan error
 
 - jika ingin ganti maksimal level air, bisa ganti angka disebelah var maxWater di script tsb (cari aja)
 
