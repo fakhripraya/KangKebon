@@ -1,9 +1,9 @@
 # KangKebon
 Bot KangKebon, buat anda yang males nyari taneman buat disiram
 
-Cara pake:
+Cara pake bot-pvu:
 
-- copy code di file js
+- copy code di file bot-pvu.js
 
 - buka plotnya (yg ada tampilan pagenya)
 
