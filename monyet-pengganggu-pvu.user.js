@@ -1,5 +1,3 @@
-// auto water
-
 // ==UserScript==
 // @name         Kang Kebun
 // @namespace    http://tampermonkey.net/
@@ -53,7 +51,8 @@
 
             var maxPage = document.getElementsByClassName("text tw-mr-2")[1];
             if (typeof (maxPage) !== 'undefined')
-                maxPage = maxPage.innerText.match(/\d+/g); maxPage = maxPage[0];
+                maxPage = maxPage.innerText.match(/\d+/g);
+            maxPage = maxPage[0];
 
             var validCount = 0;
             var waterParent = document.getElementsByClassName("tw-absolute tool-icon");
@@ -69,11 +68,13 @@
             console.log("Current Page: " + (typeof (curPage) === 'undefined' ? 1 : curPage))
             console.log("Total Page: " + (typeof (maxPage) === 'undefined' ? 1 : maxPage))
             if (curPage == maxPage) {
-                console.log("Sudah page terakhir"); clearInterval(interval);
+                console.log("Sudah page terakhir");
+                clearInterval(interval);
             } else if (validCount === 0) {
                 document.querySelectorAll('.tw-mt-6')[1].children[4].click();
             } else {
-                dryWaterToast.showToast(); console.log("Ada yang kering nih");
+                dryWaterToast.showToast();
+                console.log("Ada yang kering nih");
             }
         }
     }, 2000);
