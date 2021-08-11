@@ -29,6 +29,8 @@ Cara pake bot auto load:
 - ![image](https://user-images.githubusercontent.com/56806850/129019976-7c9fdbde-6e95-43a4-9b40-557dc746b52f.png)
 - sekarang harusnya sudah autoload, kalau belum ke load di refresh aja page plotnya
 
+- script pakai salah 1 saja, jika dienable 2 script akan error
+
 - jika ingin ganti maksimal level air, bisa ganti angka disebelah var maxWater di script tsb (cari aja)
 
 - have fun
