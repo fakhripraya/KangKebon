@@ -69,6 +69,8 @@
             console.log("Current Page: " + (typeof (curPage) === 'undefined' ? 1 : curPage))
             console.log("Total Page: " + (typeof (maxPage) === 'undefined' ? 1 : maxPage))
             if (curPage == maxPage) {
+                if (validCount > 0)
+                    dryWaterToast.showToast(); console.log("Ada yang kering nih");
                 console.log("Sudah page terakhir"); clearInterval(interval);
             } else if (validCount === 0) {
                 document.querySelectorAll('.tw-mt-6')[1].children[4].click();
