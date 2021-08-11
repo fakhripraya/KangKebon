@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Kang Kebun Bergagak
 // @namespace    http://tampermonkey.net/
-// @version      1.0.7
+// @version      1.0.8
 // @description  try to take over the plot and crow!
 // @author       You
 // @match        https://marketplace.plantvsundead.com/farm/other/*
@@ -34,17 +34,17 @@
 
     //Toast
     var dryWaterToast = Toastify({
-        text: "Ada yang kering nih!",
+        text: "Ada yang kering nih! ",
         duration: 10000
     })
 
     var crowToast = Toastify({
-        text: "Ada crow!",
+        text: "Ada crow! ",
         duration: 10000
     })
 
     var lastPageToast = Toastify({
-        text: "Sudah page terakhir :(",
+        text: "Sudah page terakhir :( ",
         duration: 10000
     })
 
