@@ -40,9 +40,9 @@
     })
 
     var maxWater = 60;
-    var pagePass = 0;
 
     console.log("Loading...")
+
     var interval = setInterval(() => {
         var loadingGif = document.getElementsByClassName("loading-page");
         if (loadingGif.length === 0) {
@@ -70,12 +70,10 @@
             console.log("Total Page: " + (typeof (maxPage) === 'undefined' ? 1 : maxPage))
             if (curPage == maxPage) {
                 console.log("Sudah page terakhir"); clearInterval(interval);
-            } else if (pagePass === 0) {
-                console.log("Page pertama selalu dilewati"); pagePass++; document.querySelectorAll('.tw-mt-6')[1].children[4].click();
             } else if (validCount === 0) {
                 document.querySelectorAll('.tw-mt-6')[1].children[4].click();
             } else {
-                dryWaterToast.showToast(); console.log("Ada yang kering nih"); clearInterval(interval);
+                dryWaterToast.showToast(); console.log("Ada yang kering nih"); //clearInterval(interval);
             }
         }
     }, 2000);
