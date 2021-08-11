@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Kang Kebun
 // @namespace    http://tampermonkey.net/
-// @version      1.0.4
+// @version      1.0.5
 // @description  try to take over the world!
 // @author       You
 // @match        https://marketplace.plantvsundead.com/farm/other/*
@@ -35,11 +35,13 @@
     //Toast
     var dryWaterToast = Toastify({
         text: "Ada yang kering nih!",
+        close: true,
         duration: 10000
     })
 
     var lastPageToast = Toastify({
         text: "Sudah page terakhir :(",
+        close: true,
         duration: 10000
     })
 
