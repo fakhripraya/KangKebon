@@ -113,6 +113,7 @@
                         clearInterval(interval);
                     } else if (validCount === 0) {
                         document.querySelectorAll('.tw-mt-6')[1].children[4].click();
+                        checkloop = true;
                     } else {
                         if (kebonValidCount > 0)
                             dryWaterToast.showToast();
