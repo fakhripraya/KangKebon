@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Kang Kebun
 // @namespace    http://tampermonkey.net/
-// @version      1.0.11
+// @version      1.0.12
 // @description  try to take over the world!
 // @author       You
 // @match        https://marketplace.plantvsundead.com/farm/other/*
@@ -49,52 +49,57 @@
 
     var interval = setInterval(() => {
         var loadingGif = document.getElementsByClassName("loading-page");
-        var capthaWindow = document.getElementsByClassName("tw-m-auto exclamation");
+        var capthaImg = document.getElementsByClassName("tw-m-auto exclamation");
+        var capthaDialog = document.getElementsByClassName("v-dialog__content v-dialog__content--active");
         var bodyElement = document.getElementById("__layout").children[0].children[1].children[0];
 
         if (typeof (bodyElement) !== 'undefined') {
             if (bodyElement.className === "content-wrapper tw-bg-farm-mobile sm:tw-bg-farm-desktop tw-p-2") {
                 if (loadingGif.length === 0) {
-                    if (typeof (capthaWindow) === 'undefined') {
-                        var curPage = document.getElementsByClassName("currentPage tw-mr-2")[0];
-                        if (typeof (curPage) !== 'undefined')
-                            curPage = curPage.innerText;
+                    if (capthaImg.length === 0) {
+                        if (capthaDialog.length === 0) {
+                            var curPage = document.getElementsByClassName("currentPage tw-mr-2")[0];
+                            if (typeof (curPage) !== 'undefined')
+                                curPage = curPage.innerText;
 
-                        var maxPage = document.getElementsByClassName("text tw-mr-2")[1];
-                        if (typeof (maxPage) !== 'undefined') {
-                            maxPage = maxPage.innerText.match(/\d+/g);
-                            maxPage = maxPage[0];
-                        }
+                            var maxPage = document.getElementsByClassName("text tw-mr-2")[1];
+                            if (typeof (maxPage) !== 'undefined') {
+                                maxPage = maxPage.innerText.match(/\d+/g);
+                                maxPage = maxPage[0];
+                            }
 
-                        var validCount = 0;
-                        var waterParent = document.getElementsByClassName("tw-absolute tool-icon");
-                        for (let i = 0; i < waterParent.length; i++) {
-                            if (waterParent[i].src === "https://marketplace.plantvsundead.com/_nuxt/img/water@3x.d5ca50d.png") {
-                                console.log(waterParent[i].parentElement.children[2].innerText)
-                                if (waterParent[i].parentElement.children[2].innerText < maxWater) {
-                                    validCount++
+                            var validCount = 0;
+                            var waterParent = document.getElementsByClassName("tw-absolute tool-icon");
+                            for (let i = 0; i < waterParent.length; i++) {
+                                if (waterParent[i].src === "https://marketplace.plantvsundead.com/_nuxt/img/water@3x.d5ca50d.png") {
+                                    console.log(waterParent[i].parentElement.children[2].innerText)
+                                    if (waterParent[i].parentElement.children[2].innerText < maxWater) {
+                                        validCount++
+                                    }
                                 }
                             }
-                        }
 
-                        console.log("Current Page: " + (typeof (curPage) === 'undefined' ? 1 : curPage))
-                        console.log("Total Page: " + (typeof (maxPage) === 'undefined' ? 1 : maxPage))
-                        if (curPage == maxPage) {
-                            if (validCount > 0) {
+                            console.log("Current Page: " + (typeof (curPage) === 'undefined' ? 1 : curPage))
+                            console.log("Total Page: " + (typeof (maxPage) === 'undefined' ? 1 : maxPage))
+                            if (curPage == maxPage) {
+                                if (validCount > 0) {
+                                    dryWaterToast.showToast();
+                                    console.log("Ada yang kering nih");
+                                }
+
+                                lastPageToast.showToast();
+                                console.log("Sudah page terakhir");
+                                clearInterval(interval);
+                            } else if (validCount === 0) {
+                                if (capthaImg.length === 0) {
+                                    if (capthaDialog.length === 0) {
+                                        document.querySelectorAll('.tw-mt-6')[1].children[4].click();
+                                    }
+                                }
+                            } else {
                                 dryWaterToast.showToast();
                                 console.log("Ada yang kering nih");
                             }
-
-                            lastPageToast.showToast();
-                            console.log("Sudah page terakhir");
-                            clearInterval(interval);
-                        } else if (validCount === 0) {
-                            if (typeof (capthaWindow) === 'undefined') {
-                                document.querySelectorAll('.tw-mt-6')[1].children[4].click();
-                            }
-                        } else {
-                            dryWaterToast.showToast();
-                            console.log("Ada yang kering nih");
                         }
                     }
                 }
