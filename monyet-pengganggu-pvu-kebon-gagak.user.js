@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Kang Kebun Bergagak
 // @namespace    http://tampermonkey.net/
-// @version      1.0.8
+// @version      1.0.9
 // @description  try to take over the plot and crow!
 // @author       You
 // @match        https://marketplace.plantvsundead.com/farm/other/*
@@ -35,21 +35,21 @@
     //Toast
     var dryWaterToast = Toastify({
         text: "Ada yang kering nih! ",
-        duration: 10000
+        close: true
     })
 
     var crowToast = Toastify({
         text: "Ada crow! ",
-        duration: 10000
+        close: true
     })
 
     var lastPageToast = Toastify({
         text: "Sudah page terakhir :( ",
-        duration: 10000
+        close: true
     })
 
-    var maxWater = 60;
-
+    var maxWater = 50;
+      var checkloop = true;
     console.log("Loading...")
 
     var interval = setInterval(() => {
@@ -78,6 +78,13 @@
                             console.log(waterParent[i].parentElement.children[2].innerText)
                             if (waterParent[i].parentElement.children[2].innerText < maxWater) {
                                 kebonValidCount++; validCount++;
+
+                          waterParent[i].parentNode.parentNode.parentNode.parentNode.parentNode.style.backgroundColor = "blue";
+                                 if(checkloop)
+                                {
+                                waterParent[i].parentNode.parentNode.parentNode.parentNode.parentNode.scrollIntoView();
+                                    checkloop = false;
+                                }
                             }
                         }
                     }
