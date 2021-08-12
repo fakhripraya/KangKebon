@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Kang Gagak
 // @namespace    http://tampermonkey.net/
-// @version      1.0.12
+// @version      1.0.13
 // @description  try to take over the crow!
 // @author       You
 // @match        https://marketplace.plantvsundead.com/farm/other/*
