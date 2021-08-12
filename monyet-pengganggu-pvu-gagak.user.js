@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Kang Gagak
 // @namespace    http://tampermonkey.net/
-// @version      1.0.10
+// @version      1.0.11
 // @description  try to take over the crow!
 // @author       You
 // @match        https://marketplace.plantvsundead.com/farm/other/*
@@ -53,7 +53,7 @@
         if (typeof (bodyElement) !== 'undefined') {
             if (bodyElement.className === "content-wrapper tw-bg-farm-mobile sm:tw-bg-farm-desktop tw-p-2") {
                 if (loadingGif.length === 0) {
-                    if (typeof (capthaWindow) !== 'undefined') {
+                    if (typeof (capthaWindow) === 'undefined') {
                         var curPage = document.getElementsByClassName("currentPage tw-mr-2")[0];
                         if (typeof (curPage) !== 'undefined')
                             curPage = curPage.innerText;
@@ -85,7 +85,9 @@
                             console.log("Sudah page terakhir");
                             clearInterval(interval);
                         } else if (validCount === 0) {
-                            document.querySelectorAll('.tw-mt-6')[1].children[4].click();
+                            if (typeof (capthaWindow) === 'undefined') {
+                                document.querySelectorAll('.tw-mt-6')[1].children[4].click();
+                            }
                         } else {
                             crowToast.showToast();
                             console.log("Ada crow!");
