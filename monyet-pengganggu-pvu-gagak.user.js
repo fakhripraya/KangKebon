@@ -42,7 +42,9 @@
         text: "Sudah page terakhir :( ",
         close: true
     })
-
+    var checkloopgagak = true,
+        prevPage = 0,
+        backgroundElement;
     console.log("Loading...")
 
     var interval = setInterval(() => {
@@ -64,12 +66,30 @@
                             maxPage = maxPage[0];
                         }
 
+                          if (curPage != prevPage) {
+                            var revertElement = document.getElementsByClassName("tw-p-3");
+                            for (let i = 0; i < revertElement.length; i++) {
+                                if (revertElement[i].style.backgroundColor == "red") {
+                                    revertElement[i].style.backgroundColor = "#151721";
+                                }
+                                prevPage = prevPage++;
+                            }
+                        }
+
                         var validCount = 0;
                         let a = document.querySelectorAll('.crow-icon')
                         for (let index = 0; index < a.length; index++) {
                             let b = a[index];
                             if (b.getAttribute('style') == "") {
                                 validCount += 1;
+                                b.parentElement.parentElement.parentElement.style.backgroundColor = "red";
+                                if (checkloopgagak) {
+                                    b.parentElement.parentElement.parentElement.scrollIntoView({
+                                        block: 'end',
+                                        behavior: 'smooth'
+                                    });
+                                    checkloopgagak = false;
+                                }
                             }
                         }
 
@@ -87,6 +107,9 @@
                         } else if (validCount === 0) {
                             if (capthaDialog.length === 0) {
                                 document.querySelectorAll('.tw-mt-6')[1].children[4].click();
+                                prevPage = curPage;
+                                checkloopgagak = true;
+
                             }
                         } else {
                             crowToast.showToast();
