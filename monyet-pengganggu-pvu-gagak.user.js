@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Kang Gagak
 // @namespace    http://tampermonkey.net/
-// @version      1.0.13
+// @version      1.1.13
 // @description  try to take over the crow!
 // @author       You
 // @match        https://marketplace.plantvsundead.com/farm/other/*
@@ -66,7 +66,7 @@
                             maxPage = maxPage[0];
                         }
 
-                          if (curPage != prevPage) {
+                        if (curPage != prevPage) {
                             var revertElement = document.getElementsByClassName("tw-p-3");
                             for (let i = 0; i < revertElement.length; i++) {
                                 if (revertElement[i].style.backgroundColor == "red") {

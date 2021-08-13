@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Kang Kebun
 // @namespace    http://tampermonkey.net/
-// @version      1.0.13
+// @version      1.1.13
 // @description  try to take over the world!
 // @author       You
 // @match        https://marketplace.plantvsundead.com/farm/other/*
