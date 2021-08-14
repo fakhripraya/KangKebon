@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name         Kang Kebun
 // @namespace    http://tampermonkey.net/
-// @version      1.1.13
+// @version      1.1.14
 // @description  try to take over the world!
 // @author       You
-// @match        https://marketplace.plantvsundead.com/farm/other/*
+// @match        https://marketplace.plantvsundead.com/*
 // @icon         https://plantvsundead.com/assets/img/icon.svg
 // @updateURL    https://github.com/fakhripraya/KangKebon/raw/main/monyet-pengganggu-pvu.user.js
 // @require      https://cdn.jsdelivr.net/npm/toastify-js
