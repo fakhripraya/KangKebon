@@ -30,7 +30,7 @@ Bot KangKebon, for those who are so lazy to find and water the plant at XXX game
   
 - And then click raw![image](https://user-images.githubusercontent.com/56806850/129019777-99cafb2f-1c77-47cc-8bae-4f0e687431ce.png)
 
-- Can be installed automatically in the tampermonkey extension![image](https://user-images.githubusercontent.com/56806850/129019866-193e214d-8aed-4a85-8adc-62836bfc5e6f.png)
+- Paste the raw code in the tampermonkey codesnippet and then click install![image](https://user-images.githubusercontent.com/56806850/129019866-193e214d-8aed-4a85-8adc-62836bfc5e6f.png)
 
 - Check your dashboard at the tampermonkey extension and enable one of the script![image](https://user-images.githubusercontent.com/56806850/129019976-7c9fdbde-6e95-43a4-9b40-557dc746b52f.png)
 
