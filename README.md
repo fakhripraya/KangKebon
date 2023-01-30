@@ -6,7 +6,7 @@ Bot KangKebon, for those who are so lazy to find and water the plant at XXX game
 
 - Use Chrome
 
-- Copy the code in bot-pvu.js file
+- Copy the code in bot-xxx-game.js file
 
 - Open the gardening plot
 
