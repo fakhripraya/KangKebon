@@ -26,10 +26,7 @@ Bot KangKebon, for those who are so lazy to find and water the plant at XXX game
 
 - Download [tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) extension and install.
 
-- Choose :
-  [monyet-pengganggu-pvu-gagak.user.js](https://github.com/fakhripraya/KangKebon/blob/main/monyet-pengganggu-pvu-gagak.user.js) 
-  [monyet-pengganggu-pvu-kebon-gagak.user.js](https://github.com/fakhripraya/KangKebon/blob/main/monyet-pengganggu-pvu-kebon-gagak.user.js)
-  [monyet-pengganggu-pvu.user.js](https://github.com/fakhripraya/KangKebon/blob/main/monyet-pengganggu-pvu.user.js) 
+- Choose one of the script
   
 - And then click raw![image](https://user-images.githubusercontent.com/56806850/129019777-99cafb2f-1c77-47cc-8bae-4f0e687431ce.png)
 
